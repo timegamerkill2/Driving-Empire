@@ -1,0 +1,21 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Driving Empire", "DarkTheme")
+local Tab = Window:NewTab("Auto Farm")
+local Section = Tab:NewSection("Auto Farm")
+Section:NewToggle("Auto Farm", "", function(state)
+    if state then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/timegamerkill2/Driving-Empire/main/AutoFarm"))()
+    else
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/timegamerkill2/Driving-Empire/main/AutoFarmOff"))()
+    end
+end)
+local Tab = Window:NewTab("Misc")
+local Section2 = Tab:NewSection("Misc")
+Section2:NewButton("Anti AFK", "", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/timegamerkill2/Driving-Empire/main/Anti-AFK"))()
+end)
+Section2:NewButton("Rejoin", "", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/timegamerkill2/Driving-Empire/main/Rejoin"))()
+end)Section2:NewKeybind("Hide UI", "", Enum.KeyCode.LeftControl, function()
+	Library:ToggleUI()
+end)
